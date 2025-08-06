@@ -1,0 +1,290 @@
+[
+  {
+    "name": "起床、早饭",
+    "day": "monday",
+    "startTime": "07:00",
+    "endTime": "08:00",
+    "points": 1,
+    "color": "#FF9800"
+  },
+  {
+    "name": "数学",
+    "day": "monday",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "points": 1,
+    "color": "#00BCD4"
+  },
+  {
+    "name": "大户外",
+    "day": "monday",
+    "startTime": "09:00",
+    "endTime": "11:00",
+    "points": 1,
+    "color": "#FF5722"
+  },
+  {
+    "name": "练字",
+    "day": "monday",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "points": 1,
+    "color": "#607D8B"
+  },
+  {
+    "name": "英语",
+    "day": "monday",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "points": 1,
+    "color": "#8BC34A"
+  },
+  {
+    "name": "起床、早饭",
+    "day": "tuesday",
+    "startTime": "07:00",
+    "endTime": "08:00",
+    "points": 1,
+    "color": "#FF9800"
+  },
+  {
+    "name": "数学",
+    "day": "tuesday",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "points": 1,
+    "color": "#00BCD4"
+  },
+  {
+    "name": "大户外",
+    "day": "tuesday",
+    "startTime": "09:00",
+    "endTime": "11:00",
+    "points": 1,
+    "color": "#FF5722"
+  },
+  {
+    "name": "练字",
+    "day": "tuesday",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "points": 1,
+    "color": "#607D8B"
+  },
+  {
+    "name": "英语",
+    "day": "tuesday",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "points": 1,
+    "color": "#8BC34A"
+  },
+  {
+    "name": "起床、早饭",
+    "day": "wednesday",
+    "startTime": "07:00",
+    "endTime": "08:00",
+    "points": 1,
+    "color": "#FF9800"
+  },
+  {
+    "name": "数学",
+    "day": "wednesday",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "points": 1,
+    "color": "#00BCD4"
+  },
+  {
+    "name": "大户外",
+    "day": "wednesday",
+    "startTime": "09:00",
+    "endTime": "11:00",
+    "points": 1,
+    "color": "#FF5722"
+  },
+  {
+    "name": "练字",
+    "day": "wednesday",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "points": 1,
+    "color": "#607D8B"
+  },
+  {
+    "name": "英语",
+    "day": "wednesday",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "points": 1,
+    "color": "#8BC34A"
+  },
+  {
+    "name": "起床、早饭",
+    "day": "thursday",
+    "startTime": "07:00",
+    "endTime": "08:00",
+    "points": 1,
+    "color": "#FF9800"
+  },
+  {
+    "name": "数学",
+    "day": "thursday",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "points": 1,
+    "color": "#00BCD4"
+  },
+  {
+    "name": "大户外",
+    "day": "thursday",
+    "startTime": "09:00",
+    "endTime": "11:00",
+    "points": 1,
+    "color": "#FF5722"
+  },
+  {
+    "name": "练字",
+    "day": "thursday",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "points": 1,
+    "color": "#607D8B"
+  },
+  {
+    "name": "英语",
+    "day": "thursday",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "points": 1,
+    "color": "#8BC34A"
+  },
+  {
+    "name": "起床、早饭",
+    "day": "friday",
+    "startTime": "07:00",
+    "endTime": "08:00",
+    "points": 1,
+    "color": "#FF9800"
+  },
+  {
+    "name": "数学",
+    "day": "friday",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "points": 1,
+    "color": "#00BCD4"
+  },
+  {
+    "name": "大户外",
+    "day": "friday",
+    "startTime": "09:00",
+    "endTime": "11:00",
+    "points": 1,
+    "color": "#FF5722"
+  },
+  {
+    "name": "练字",
+    "day": "friday",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "points": 1,
+    "color": "#607D8B"
+  },
+  {
+    "name": "英语课",
+    "day": "friday",
+    "startTime": "18:15",
+    "endTime": "19:45",
+    "points": 1,
+    "color": "#8BC34A"
+  },
+  {
+    "name": "起床、早饭",
+    "day": "saturday",
+    "startTime": "07:00",
+    "endTime": "08:00",
+    "points": 1,
+    "color": "#FF9800"
+  },
+  {
+    "name": "户外运动",
+    "day": "saturday",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "points": 1,
+    "color": "#F44336"
+  },
+  {
+    "name": "户外运动",
+    "day": "saturday",
+    "startTime": "09:00",
+    "endTime": "11:00",
+    "points": 1,
+    "color": "#F44336"
+  },
+  {
+    "name": "户外运动",
+    "day": "saturday",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "points": 1,
+    "color": "#F44336"
+  },
+  {
+    "name": "户外运动",
+    "day": "saturday",
+    "startTime": "15:00",
+    "endTime": "16:30",
+    "points": 1,
+    "color": "#F44336"
+  },
+  {
+    "name": "英语",
+    "day": "saturday",
+    "startTime": "19:30",
+    "endTime": "20:30",
+    "points": 1,
+    "color": "#4CAF50"
+  },
+  {
+    "name": "起床、早饭",
+    "day": "sunday",
+    "startTime": "07:00",
+    "endTime": "08:00",
+    "points": 1,
+    "color": "#FF9800"
+  },
+  {
+    "name": "户外运动",
+    "day": "sunday",
+    "startTime": "08:00",
+    "endTime": "08:30",
+    "points": 1,
+    "color": "#F44336"
+  },
+  {
+    "name": "户外运动",
+    "day": "sunday",
+    "startTime": "09:00",
+    "endTime": "11:00",
+    "points": 1,
+    "color": "#F44336"
+  },
+  {
+    "name": "户外运动",
+    "day": "sunday",
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "points": 1,
+    "color": "#F44336"
+  },
+  {
+    "name": "英语课",
+    "day": "sunday",
+    "startTime": "15:30",
+    "endTime": "17:00",
+    "points": 1,
+    "color": "#4CAF50"
+  }
+]
