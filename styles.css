@@ -11,10 +11,61 @@ body {
     line-height: 1.6;
 }
 
+.preset-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    margin: 4px;
+    border: 1px solid #ccc;
+}
+
+.color-4CAF50 {
+    background-color: #4CAF50;
+}
+
+.color-2196F3 {
+    background-color: #2196F3;
+}
+
+.color-FF9800 {
+    background-color: #FF9800;
+}
+
+.color-F44336 {
+    background-color: #F44336;
+}
+
+.color-9C27B0 {
+    background-color: #9C27B0;
+}
+
+.color-00BCD4 {
+    background-color: #00BCD4;
+}
+
+.color-8BC34A {
+    background-color: #8BC34A;
+}
+
+.color-FF5722 {
+    background-color: #FF5722;
+}
+
+.color-607D8B {
+    background-color: #607D8B;
+}
+
+.color-795548 {
+    background-color: #795548;
+}
+
 .container {
     max-width: 100%;
     margin: 0 auto;
-    padding: 20px; /* 增加页面整体内边距 */
+    padding: 20px;
+    /* 增加页面整体内边距 */
 }
 
 header {
@@ -101,8 +152,9 @@ header h1 {
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin: 0 5px; /* 为每天的列添加水平间距 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0 5px;
+    /* 为每天的列添加水平间距 */
 }
 
 .day-header {
@@ -127,15 +179,17 @@ header h1 {
     margin-bottom: 10px;
     position: relative;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
-    /* 添加居中显示和统一宽度的样式 */
     width: calc(100% - 20px);
     margin-left: auto;
     margin-right: auto;
     min-width: 120px;
     text-align: center;
-    user-select: none; /* 防止长按时选择文本 */
+    -webkit-user-select: none;
+    /* 兼容 Safari 和 iOS Safari */
+    user-select: none;
+    /* 防止长按时选择文本 */
 }
 
 .course-card:hover {
@@ -176,17 +230,21 @@ header h1 {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: auto; /* 修改宽度为自适应 */
+    width: auto;
+    /* 修改宽度为自适应 */
     height: 60px;
-    border-radius: 30px; /* 调整圆角 */
+    border-radius: 30px;
+    /* 调整圆角 */
     background-color: #FF9800;
     color: white;
     border: none;
-    font-size: 1rem; /* 调整字体大小 */
+    font-size: 1rem;
+    /* 调整字体大小 */
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 100;
-    padding: 0 20px; /* 增加内边距 */
+    padding: 0 20px;
+    /* 增加内边距 */
 }
 
 .rewards-header {
@@ -216,7 +274,7 @@ header h1 {
     background-color: white;
     border-radius: 10px;
     padding: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
@@ -296,7 +354,7 @@ header h1 {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
@@ -338,7 +396,8 @@ header h1 {
 
 /* 调整课程颜色选择器的高度 */
 .form-group input[type="color"] {
-    height: 40px; /* 增加输入框高度 */
+    height: 40px;
+    /* 增加输入框高度 */
 }
 
 button[type="submit"] {
@@ -365,7 +424,7 @@ button[type="submit"]:hover {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .long-press-content {
@@ -415,12 +474,15 @@ button[type="submit"]:hover {
 }
 
 .preset-color {
-    width: 40px; /* 保持正方形 */
-    height: 40px; /* 与输入框高度一致 */
-    border-radius: 5px; /* 圆角矩形 */
+    width: 40px;
+    /* 保持正方形 */
+    height: 40px;
+    /* 与输入框高度一致 */
+    border-radius: 5px;
+    /* 圆角矩形 */
     cursor: pointer;
     border: 2px solid #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
 }
 
@@ -430,18 +492,20 @@ button[type="submit"]:hover {
 
 @media (max-width: 768px) {
     .container {
-        padding: 10px; /* 在小屏幕上减少内边距 */
+        padding: 10px;
+        /* 在小屏幕上减少内边距 */
     }
-    
+
     .days-container {
         flex-direction: column;
     }
-    
+
     .day-column {
         min-width: 100%;
-        margin: 5px 0; /* 在小屏幕上调整间距 */
+        margin: 5px 0;
+        /* 在小屏幕上调整间距 */
     }
-    
+
     .rewards-list {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
