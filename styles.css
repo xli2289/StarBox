@@ -1,0 +1,448 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px; /* 增加页面整体内边距 */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+.points-display {
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.points-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.points-btn {
+    background-color: #FF9800;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.tab-nav {
+    display: flex;
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.tab-btn.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.days-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.day-column {
+    flex: 1;
+    min-width: 140px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 0 5px; /* 为每天的列添加水平间距 */
+}
+
+.day-header {
+    background-color: #81C784;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.day-content {
+    min-height: 400px;
+    padding: 10px;
+    position: relative;
+}
+
+.course-card {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    /* 添加居中显示和统一宽度的样式 */
+    width: calc(100% - 20px);
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 120px;
+    text-align: center;
+    user-select: none; /* 防止长按时选择文本 */
+}
+
+.course-card:hover {
+    transform: translateY(-2px);
+}
+
+.course-card.completed {
+    opacity: 0.7;
+    background-color: #9E9E9E;
+}
+
+.course-card.completed::after {
+    content: "✓";
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 1.2rem;
+}
+
+.course-card h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.course-time {
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.course-points {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* 删除按钮相关样式移除 */
+
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: auto; /* 修改宽度为自适应 */
+    height: 60px;
+    border-radius: 30px; /* 调整圆角 */
+    background-color: #FF9800;
+    color: white;
+    border: none;
+    font-size: 1rem; /* 调整字体大小 */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 100;
+    padding: 0 20px; /* 增加内边距 */
+}
+
+.rewards-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-reward-button {
+    background-color: #FF9800;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.rewards-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.reward-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.reward-card h3 {
+    margin-bottom: 10px;
+}
+
+.reward-cost {
+    color: #FF9800;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.reward-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.reward-btn {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.edit-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.exchange-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.delete-reward-btn {
+    background-color: #F44336;
+    color: white;
+}
+
+.history-list {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.history-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.history-date {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.history-description {
+    margin: 5px 0;
+}
+
+.history-points {
+    font-weight: bold;
+    color: #FF9800;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* 调整课程颜色选择器的高度 */
+.form-group input[type="color"] {
+    height: 40px; /* 增加输入框高度 */
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* 添加长按删除确认弹窗样式 */
+.long-press-modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.long-press-content {
+    background-color: white;
+    margin: 30% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.long-press-content h3 {
+    margin-top: 0;
+}
+
+.long-press-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.long-press-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirm-delete-btn {
+    background-color: #F44336;
+    color: white;
+}
+
+.cancel-delete-btn {
+    background-color: #ccc;
+    color: black;
+}
+
+/* 预设颜色选择器样式 */
+.preset-colors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.preset-color {
+    width: 40px; /* 保持正方形 */
+    height: 40px; /* 与输入框高度一致 */
+    border-radius: 5px; /* 圆角矩形 */
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.preset-color:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* 在小屏幕上减少内边距 */
+    }
+    
+    .days-container {
+        flex-direction: column;
+    }
+    
+    .day-column {
+        min-width: 100%;
+        margin: 5px 0; /* 在小屏幕上调整间距 */
+    }
+    
+    .rewards-list {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}

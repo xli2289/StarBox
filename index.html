@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能课表</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>智能课表</h1>
+            <div class="points-display">
+                <span>总积分: <span id="total-points">0</span></span>
+                <div class="points-buttons">
+                    <button id="add-points-btn" class="points-btn">增加积分</button>
+                    <button id="deduct-points-btn" class="points-btn">消耗积分</button>
+                </div>
+            </div>
+        </header>
+
+        <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="schedule">课表</button>
+            <button class="tab-btn" data-tab="rewards">奖励</button>
+            <button class="tab-btn" data-tab="history">历史记录</button>
+        </nav>
+
+        <main>
+            <!-- 课表页面 -->
+            <section id="schedule" class="tab-content active">
+                <div class="days-container">
+                    <div class="day-column">
+                        <div class="day-header">周一</div>
+                        <div class="day-content" data-day="monday"></div>
+                    </div>
+                    <div class="day-column">
+                        <div class="day-header">周二</div>
+                        <div class="day-content" data-day="tuesday"></div>
+                    </div>
+                    <div class="day-column">
+                        <div class="day-header">周三</div>
+                        <div class="day-content" data-day="wednesday"></div>
+                    </div>
+                    <div class="day-column">
+                        <div class="day-header">周四</div>
+                        <div class="day-content" data-day="thursday"></div>
+                    </div>
+                    <div class="day-column">
+                        <div class="day-header">周五</div>
+                        <div class="day-content" data-day="friday"></div>
+                    </div>
+                    <div class="day-column">
+                        <div class="day-header">周六</div>
+                        <div class="day-content" data-day="saturday"></div>
+                    </div>
+                    <div class="day-column">
+                        <div class="day-header">周日</div>
+                        <div class="day-content" data-day="sunday"></div>
+                    </div>
+                </div>
+
+                <button id="add-course-btn" class="floating-btn">新增活动</button>
+            </section>
+
+            <!-- 奖励页面 -->
+            <section id="rewards" class="tab-content">
+                <div class="rewards-header">
+                    <h2>奖励物品</h2>
+                    <button id="add-reward-btn" class="add-reward-button">添加奖励</button>
+                </div>
+                <div id="rewards-list" class="rewards-list"></div>
+            </section>
+
+            <!-- 历史记录页面 -->
+            <section id="history" class="tab-content">
+                <h2>积分历史</h2>
+                <div id="history-list" class="history-list"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 添加课程弹窗 -->
+    <div id="course-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>添加课程</h2>
+            <form id="course-form">
+                <div class="form-group">
+                    <label for="course-name">课程名称:</label>
+                    <input type="text" id="course-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="course-day">星期:</label>
+                    <select id="course-day" required>
+                        <option value="monday">周一</option>
+                        <option value="tuesday">周二</option>
+                        <option value="wednesday">周三</option>
+                        <option value="thursday">周四</option>
+                        <option value="friday">周五</option>
+                        <option value="saturday">周六</option>
+                        <option value="sunday">周日</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="start-time">开始时间:</label>
+                    <input type="time" id="start-time" required>
+                </div>
+                <div class="form-group">
+                    <label for="end-time">结束时间:</label>
+                    <input type="time" id="end-time" required>
+                </div>
+                <div class="form-group">
+                    <label for="course-points">积分值:</label>
+                    <input type="number" id="course-points" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="course-color">背景颜色:</label>
+                    <input type="color" id="course-color" value="#4CAF50">
+                    <div class="preset-colors">
+                        <div class="preset-color" style="background-color: #4CAF50;" data-color="#4CAF50"></div>
+                        <div class="preset-color" style="background-color: #2196F3;" data-color="#2196F3"></div>
+                        <div class="preset-color" style="background-color: #FF9800;" data-color="#FF9800"></div>
+                        <div class="preset-color" style="background-color: #F44336;" data-color="#F44336"></div>
+                        <div class="preset-color" style="background-color: #9C27B0;" data-color="#9C27B0"></div>
+                        <div class="preset-color" style="background-color: #00BCD4;" data-color="#00BCD4"></div>
+                        <div class="preset-color" style="background-color: #8BC34A;" data-color="#8BC34A"></div>
+                        <div class="preset-color" style="background-color: #FF5722;" data-color="#FF5722"></div>
+                        <div class="preset-color" style="background-color: #607D8B;" data-color="#607D8B"></div>
+                        <div class="preset-color" style="background-color: #795548;" data-color="#795548"></div>
+                    </div>
+                </div>
+                <button type="submit">添加课程</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 编辑奖励弹窗 -->
+    <div id="reward-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="reward-modal-title">添加奖励</h2>
+            <form id="reward-form">
+                <input type="hidden" id="reward-id">
+                <div class="form-group">
+                    <label for="reward-name">奖励名称:</label>
+                    <input type="text" id="reward-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reward-cost">所需积分:</label>
+                    <input type="number" id="reward-cost" min="1" required>
+                </div>
+                <button type="submit">保存</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 长按删除确认弹窗 -->
+    <div id="long-press-modal" class="long-press-modal">
+        <div class="long-press-content">
+            <h3>确认删除</h3>
+            <p>确定要删除课程 <span id="delete-course-name"></span> 吗？</p>
+            <div class="long-press-buttons">
+                <button id="confirm-delete-btn" class="long-press-btn confirm-delete-btn">删除</button>
+                <button id="cancel-delete-btn" class="long-press-btn cancel-delete-btn">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
