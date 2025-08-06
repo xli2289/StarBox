@@ -21,8 +21,8 @@
 
         <nav class="tab-nav">
             <button class="tab-btn active" data-tab="schedule">课表</button>
-            <button class="tab-btn" data-tab="rewards">奖励</button>
-            <button class="tab-btn" data-tab="history">历史记录</button>
+            <button class="tab-btn" data-tab="rewards">奖励领取</button>
+            <button class="tab-btn" data-tab="history">积分记录</button>
         </nav>
 
         <main>
@@ -60,6 +60,7 @@
                 </div>
 
                 <button id="add-course-btn" class="floating-btn">新增活动</button>
+                <button id="batch-add-course-btn" class="floating-btn">批量添加</button>
             </section>
 
             <!-- 奖励页面 -->
@@ -73,7 +74,7 @@
 
             <!-- 历史记录页面 -->
             <section id="history" class="tab-content">
-                <h2>积分历史</h2>
+                <h2>积分记录</h2>
                 <div id="history-list" class="history-list"></div>
             </section>
         </main>
@@ -134,6 +135,53 @@
         </div>
     </div>
 
+    <!-- 批量添加课程弹窗 -->
+    <div id="batch-course-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>批量添加课程</h2>
+            <form id="batch-course-form">
+                <div class="form-group">
+                    <label for="batch-course-data">课程数据 (JSON格式):</label>
+                    <textarea id="batch-course-data" rows="10" placeholder='[
+  {
+    "name": "数学课",
+    "day": "monday",
+    "startTime": "08:00",
+    "endTime": "09:30",
+    "points": 10,
+    "color": "#4CAF50"
+  },
+  {
+    "name": "英语课",
+    "day": "tuesday",
+    "startTime": "10:00",
+    "endTime": "11:30",
+    "points": 15,
+    "color": "#2196F3"
+  }
+]'></textarea>
+                </div>
+                <div class="form-group">
+                    <pre>
+格式说明:
+[
+  {
+    "name": "课程名称",
+    "day": "星期(monday-sunday)",
+    "startTime": "开始时间(HH:MM)",
+    "endTime": "结束时间(HH:MM)",
+    "points": 积分值,
+    "color": "背景颜色(#RRGGBB)"
+  },
+  ...
+]</pre>
+                </div>
+                <button type="submit">批量添加</button>
+            </form>
+        </div>
+    </div>
+
     <!-- 编辑奖励弹窗 -->
     <div id="reward-modal" class="modal">
         <div class="modal-content">
@@ -154,14 +202,15 @@
         </div>
     </div>
 
-    <!-- 长按删除确认弹窗 -->
+    <!-- 长按操作选择弹窗 -->
     <div id="long-press-modal" class="long-press-modal">
         <div class="long-press-content">
-            <h3>确认删除</h3>
-            <p>确定要删除课程 <span id="delete-course-name"></span> 吗？</p>
+            <h3>选择操作</h3>
+            <p>对课程 <span id="action-course-name"></span> 进行什么操作？</p>
             <div class="long-press-buttons">
-                <button id="confirm-delete-btn" class="long-press-btn confirm-delete-btn">删除</button>
-                <button id="cancel-delete-btn" class="long-press-btn cancel-delete-btn">取消</button>
+                <button id="edit-course-btn" class="long-press-btn confirm-delete-btn">编辑</button>
+                <button id="delete-course-btn" class="long-press-btn cancel-delete-btn">删除</button>
+                <button id="cancel-action-btn" class="long-press-btn">取消</button>
             </div>
         </div>
     </div>
