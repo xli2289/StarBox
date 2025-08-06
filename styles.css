@@ -11,6 +11,7 @@ body {
     line-height: 1.6;
 }
 
+/* 预设颜色选择器样式 - 用于课程颜色选择 */
 .preset-color {
     width: 20px;
     height: 20px;
@@ -21,6 +22,7 @@ body {
     border: 1px solid #ccc;
 }
 
+/* 各种预设颜色样式 - 对应课程表单中的预设颜色选项 */
 .color-4CAF50 {
     background-color: #4CAF50;
 } 
@@ -61,6 +63,7 @@ body {
     background-color: #795548;
 }
 
+/* 主容器样式 - 页面主要内容容器 */
 .container {
     max-width: 100%;
     margin: 0 auto;
@@ -68,6 +71,7 @@ body {
     /* 增加页面整体内边距 */
 }
 
+/* 页面头部样式 - 包含标题和积分显示 */
 header {
     display: flex;
     justify-content: space-between;
@@ -79,10 +83,12 @@ header {
     margin-bottom: 15px;
 }
 
+/* 页面标题样式 - "智能课表"文本 */
 header h1 {
     font-size: 1.5rem;
 }
 
+/* 积分显示区域样式 - 显示总积分 */
 .points-display {
     font-size: 1.1rem;
     font-weight: bold;
@@ -91,11 +97,13 @@ header h1 {
     gap: 10px;
 }
 
+/* 积分操作按钮容器 - 包含增加和扣除积分按钮 */
 .points-buttons {
     display: flex;
     gap: 5px;
 }
 
+/* 积分操作按钮样式 - 增加积分和扣除积分按钮 */
 .points-btn {
     background-color: #FF9800;
     color: white;
@@ -107,6 +115,7 @@ header h1 {
     white-space: nowrap;
 }
 
+/* 标签导航样式 - 课表、奖励领取、积分记录三个标签 */
 .tab-nav {
     display: flex;
     margin-bottom: 15px;
@@ -115,6 +124,7 @@ header h1 {
     overflow: hidden;
 }
 
+/* 标签按钮样式 - 三个标签按钮的通用样式 */
 .tab-btn {
     flex: 1;
     padding: 12px;
@@ -125,19 +135,23 @@ header h1 {
     transition: background-color 0.3s;
 }
 
+/* 激活状态的标签按钮样式 */
 .tab-btn.active {
     background-color: #4CAF50;
     color: white;
 }
 
+/* 标签内容区域样式 - 三个标签页的内容容器 */
 .tab-content {
     display: none;
 }
 
+/* 激活状态的标签内容区域样式 */
 .tab-content.active {
     display: block;
 }
 
+/* 星期列容器样式 - 包含周一到周日的容器 */
 .days-container {
     display: flex;
     overflow-x: auto;
@@ -146,6 +160,7 @@ header h1 {
     width: 100%;
 }
 
+/* 单个星期列样式 - 每一天的列容器 */
 .day-column {
     flex: 1;
     min-width: 140px;
@@ -157,6 +172,7 @@ header h1 {
     /* 为每天的列添加水平间距 */
 }
 
+/* 星期标题样式 - 周一到周日的标题栏 */
 .day-header {
     background-color: #81C784;
     color: white;
@@ -165,12 +181,14 @@ header h1 {
     font-weight: bold;
 }
 
+/* 星期内容区域样式 - 每天课程放置的区域 */
 .day-content {
     min-height: 400px;
     padding: 10px;
     position: relative;
 }
 
+/* 课程卡片样式 - 单个课程的显示样式 */
 .course-card {
     background-color: #4CAF50;
     color: white;
@@ -192,15 +210,18 @@ header h1 {
     /* 防止长按时选择文本 */
 }
 
+/* 课程卡片悬停效果样式 */
 .course-card:hover {
     transform: translateY(-2px);
 }
 
+/* 已完成课程卡片样式 */
 .course-card.completed {
     opacity: 0.7;
     background-color: #9E9E9E;
 }
 
+/* 已完成课程标记样式 - 显示对勾符号 */
 .course-card.completed::after {
     content: "✓";
     position: absolute;
@@ -209,25 +230,25 @@ header h1 {
     font-size: 1.2rem;
 }
 
+/* 课程名称样式 */
 .course-card h3 {
     font-size: 1rem;
     margin-bottom: 5px;
 }
 
+/* 课程时间样式 */
 .course-time {
     font-size: 0.85rem;
     margin-bottom: 5px;
 }
 
+/* 课程积分样式 */
 .course-points {
     font-size: 0.9rem;
     font-weight: bold;
 }
 
-/* 删除按钮相关样式移除 */
-
-/* 修改第二个按钮的右侧偏移量 */
-
+/* 奖励页面头部样式 - 包含标题和添加奖励按钮 */
 .rewards-header {
     display: flex;
     justify-content: space-between;
@@ -235,6 +256,7 @@ header h1 {
     margin-bottom: 20px;
 }
 
+/* 添加奖励按钮样式 */
 .add-reward-button {
     background-color: #FF9800;
     color: white;
@@ -245,12 +267,14 @@ header h1 {
     font-size: 1rem;
 }
 
+/* 奖励列表样式 - 奖励项目的网格布局 */
 .rewards-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 15px;
 }
 
+/* 奖励卡片样式 - 单个奖励项目的显示样式 */
 .reward-card {
     background-color: white;
     border-radius: 10px;
@@ -263,6 +287,7 @@ header h1 {
     flex-direction: column;
 }
 
+/* 奖励名称样式 */
 .reward-card h3 {
     margin-bottom: 15px;
     color: #333;
@@ -270,6 +295,7 @@ header h1 {
     flex-grow: 1;
 }
 
+/* 奖励积分消耗样式 */
 .reward-cost {
     color: #FF9800;
     font-weight: bold;
@@ -280,6 +306,7 @@ header h1 {
     border-radius: 20px;
 }
 
+/* 奖励操作按钮容器样式 */
 .reward-actions {
     display: flex;
     gap: 10px;
@@ -287,6 +314,7 @@ header h1 {
     justify-content: flex-end; /* 将按钮排列在右侧 */
 }
 
+/* 奖励操作按钮通用样式 */
 .reward-btn {
     flex: 1;
     padding: 10px 15px;
@@ -298,6 +326,7 @@ header h1 {
     transition: background-color 0.3s;
 }
 
+/* 编辑奖励按钮样式 */
 .edit-btn {
     background-color: transparent; /* 改为透明背景 */
     color: #2196F3;
@@ -308,6 +337,7 @@ header h1 {
     background-color: #e6f7ff; /* 鼠标悬停时背景颜色 */
 }
 
+/* 兑换奖励按钮样式 */
 .exchange-btn {
     background-color: #4CAF50;
     color: white;
@@ -317,6 +347,7 @@ header h1 {
     background-color: #3d8b40;
 }
 
+/* 删除奖励按钮样式 */
 .delete-reward-btn {
     background-color: transparent; /* 改为透明背景 */
     color: #F44336;
@@ -327,12 +358,14 @@ header h1 {
     background-color: #ffebee; /* 鼠标悬停时背景颜色 */
 }
 
+/* 历史记录列表样式 */
 .history-list {
     background-color: white;
     border-radius: 10px;
     padding: 15px;
 }
 
+/* 单个历史记录项样式 */
 .history-item {
     padding: 10px;
     border-bottom: 1px solid #eee;
@@ -342,20 +375,24 @@ header h1 {
     border-bottom: none;
 }
 
+/* 历史记录日期样式 */
 .history-date {
     font-weight: bold;
     color: #4CAF50;
 }
 
+/* 历史记录描述样式 */
 .history-description {
     margin: 5px 0;
 }
 
+/* 历史记录积分变化样式 */
 .history-points {
     font-weight: bold;
     color: #FF9800;
 }
 
+/* 模态框样式 - 通用弹窗样式 */
 .modal {
     display: none;
     position: fixed;
@@ -367,6 +404,7 @@ header h1 {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* 模态框内容样式 */
 .modal-content {
     background-color: white;
     margin: 10% auto;
@@ -377,6 +415,7 @@ header h1 {
     position: relative;
 }
 
+/* 关闭按钮样式 */
 .close {
     position: absolute;
     right: 15px;
@@ -385,16 +424,19 @@ header h1 {
     cursor: pointer;
 }
 
+/* 表单组样式 */
 .form-group {
     margin-bottom: 15px;
 }
 
+/* 表单标签样式 */
 .form-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
+/* 表单输入框和选择框样式 */
 .form-group input,
 .form-group select {
     width: 100%;
@@ -410,6 +452,7 @@ header h1 {
     /* 增加输入框高度 */
 }
 
+/* 表单文本域样式 */
 .form-group textarea {
     width: 100%;
     padding: 10px;
@@ -419,6 +462,7 @@ header h1 {
     font-family: monospace;
 }
 
+/* 表单预格式化文本样式 */
 .modal-content pre {
     background-color: #f5f5f5;
     padding: 10px;
@@ -428,6 +472,7 @@ header h1 {
     margin: 10px 0;
 }
 
+/* 表单提交按钮样式 */
 button[type="submit"] {
     width: 100%;
     padding: 12px;
@@ -443,7 +488,7 @@ button[type="submit"]:hover {
     background-color: #45a049;
 }
 
-/* 添加长按删除确认弹窗样式 */
+/* 添加长按操作确认弹窗样式 */
 .long-press-modal {
     display: none;
     position: fixed;
@@ -455,6 +500,7 @@ button[type="submit"]:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* 长按操作弹窗内容样式 */
 .long-press-content {
     background-color: white;
     margin: 30% auto;
@@ -470,12 +516,14 @@ button[type="submit"]:hover {
     margin-top: 0;
 }
 
+/* 长按操作按钮容器样式 */
 .long-press-buttons {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
 }
 
+/* 长按操作按钮样式 */
 .long-press-btn {
     padding: 8px 16px;
     border: none;
@@ -483,17 +531,19 @@ button[type="submit"]:hover {
     cursor: pointer;
 }
 
+/* 编辑课程按钮样式 */
 .confirm-delete-btn {
     background-color: #2196F3;
     color: white;
 }
 
+/* 删除课程按钮样式 */
 .cancel-delete-btn {
     background-color: #F44336;
     color: white;
 }
 
-/* 预设颜色选择器样式 */
+/* 预设颜色选择器容器样式 */
 .preset-colors {
     display: flex;
     flex-wrap: wrap;
@@ -501,6 +551,7 @@ button[type="submit"]:hover {
     margin-top: 10px;
 }
 
+/* 预设颜色选项样式 */
 .preset-color {
     width: 40px;
     /* 保持正方形 */
@@ -518,7 +569,7 @@ button[type="submit"]:hover {
     transform: scale(1.1);
 }
 
-/* 使用Flexbox布局的浮动按钮容器 */
+/* 使用Flexbox布局的浮动按钮容器 - 新增活动和批量添加按钮容器 */
 .floating-btn-container {
     position: fixed;
     bottom: 20px;
@@ -529,6 +580,7 @@ button[type="submit"]:hover {
     z-index: 100;
 }
 
+/* 浮动按钮样式 - 新增活动和批量添加按钮 */
 .floating-btn {
     width: auto;
     height: 50px;
