@@ -227,10 +227,6 @@ header h1 {
 /* 删除按钮相关样式移除 */
 
 /* 修改第二个按钮的右侧偏移量 */
-.floating-btn:nth-child(2) {
-    bottom: 20px;
-    right: calc(20px + 120px); /* 增加右侧偏移量，确保与第一个按钮有足够的间距 */
-}
 
 .rewards-header {
     display: flex;
